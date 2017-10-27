@@ -19,3 +19,7 @@ class TestBasics(unittest.TestCase):
 	def test_divide(self):
 		result = rpn.calculate('30 5 /')
 		self.assertEqual(6,result)
+
+	def test_exp(self):
+		result = rpn.calculate('4 3 ^')
+		self.assertEqual(64,result)
