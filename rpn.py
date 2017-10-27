@@ -29,6 +29,12 @@ def main():
 	while True:
 		calculate(input("rpn calc> "))
 
+def function_without_a_test():
+	a = 1
+	b = 2
+	c = 3
+	d = a + b + c
+
 if __name__ == '__main__': # __name__ stores the main thing being run
 	# will not run if running from test_rpn.py
 	main()
