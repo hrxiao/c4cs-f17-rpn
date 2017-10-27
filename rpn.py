@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 import operator
+import readline
 
 ops = {
 	'+': operator.add,
 	'-': operator.sub,
 	'*': operator.mul,
 	'/': operator.truediv,
-	'^': operator.pow
+	'^': operator.pow,
+	'%': operator.mod
 }
 
 def calculate(arg):
@@ -20,6 +22,7 @@ def calculate(arg):
 			function = ops[token]
 			result = function(arg1, arg2)
 			stack.append(result)
+	print(stack)
 	return stack.pop()
 
 def main():
