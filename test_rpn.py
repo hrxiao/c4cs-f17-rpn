@@ -12,3 +12,10 @@ class TestBasics(unittest.TestCase):
 		result = rpn.calculate('5 3 -')
 		self.assertEqual(2,result)
 
+	def test_multiply(self):
+		result = rpn.calculate('4 3 *')
+		self.assertEqual(12,result)
+
+	def test_divide(self):
+		result = rpn.calculate('30 5 /')
+		self.assertEqual(6,result)
