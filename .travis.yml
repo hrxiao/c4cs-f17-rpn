@@ -6,6 +6,6 @@ install:
  - pip install colorama
 script: 
  - make
- - coverage run -m unittest discover
+ - coverage run --source=rpn.py test_rpn.py -m unittest discover
 after_success:
  - coveralls
