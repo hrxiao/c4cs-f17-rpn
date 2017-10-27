@@ -6,6 +6,6 @@ install:
  - pip install colorama
 script: 
  - make
- - coverage run --source=rpn.py test_rpn.py -m unittest discover
+ - coverage run --omit=/home/travis/virtualenv/python3.5.3/lib/python3.5/site-packages/colorama/* -m unittest discover
 after_success:
  - coveralls
