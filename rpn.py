@@ -9,8 +9,6 @@ ops = {
 	'^': operator.pow
 }
 
-#dict(operator)???
-
 def calculate(arg):
 	stack = list()
 	for token in arg.split():
@@ -22,19 +20,6 @@ def calculate(arg):
 			function = ops[token]
 			result = function(arg1, arg2)
 			stack.append(result)
-			
-		# if token == '+':
-		# 	arg1 = stack.pop()
-		# 	arg2 = stack.pop()
-		# 	result = arg1 + arg2
-		# 	stack.append(result)
-		# elif token == "-":
-		# 	arg1 = stack.pop()
-		# 	arg2 = stack.pop()
-		# 	result = arg2 - arg1
-		# 	stack.append(result)
-		# else:
-	# print(stack)
 	return stack.pop()
 
 def main():
